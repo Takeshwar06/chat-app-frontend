@@ -115,6 +115,7 @@ const Container = styled.div`
 
   .loader {
     width: 100vw;  
+    height: 100vh;
     max-inline-size: 100%;
   }
 
