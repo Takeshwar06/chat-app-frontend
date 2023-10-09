@@ -14,6 +14,9 @@ export default function Chat() {
   const [contacts, setContacts] = useState([]);
   const [currentChat, setCurrentChat] = useState(undefined);
   const [currentUser, setCurrentUser] = useState(undefined);
+  const [isDark,setIsDark]=useState(true);
+  const [contactHidden,setContactHidden]=useState(true);
+  const [showDefaultContact,setShowDefaultContact]=useState(true);
   useEffect(async () => {
     if (!localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)) {
       navigate("/login");
@@ -37,6 +40,7 @@ export default function Chat() {
       if (currentUser.isAvatarImageSet) {
         const data = await axios.get(`${allUsersRoute}/${currentUser._id}`);
         setContacts(data.data);
+        setShowDefaultContact(false);
       } else {
         navigate("/setAvatar");
       }
@@ -47,16 +51,16 @@ export default function Chat() {
   };
   return (
     <>
-      <Container>
+        <div className={`main-container ${isDark===true?"dark":""}`}>
         <div className="container">
-          <Contacts contacts={contacts} changeChat={handleChatChange} />
+          <Contacts showDefaultContact={showDefaultContact} setContactHidden={setContactHidden} contactHidden={contactHidden} contacts={contacts} changeChat={handleChatChange} />
           {currentChat === undefined ? (
-            <Welcome />
+            <Welcome setContactHidden={setContactHidden} contactHidden={contactHidden} />
           ) : (
-            <ChatContainer currentChat={currentChat} socket={socket} />
+            <ChatContainer contactHidden={contactHidden} setContactHidden={setContactHidden} isDark={isDark} setIsDark={setIsDark} currentChat={currentChat} socket={socket} />
           )}
         </div>
-      </Container>
+      </div>
     </>
   );
 }

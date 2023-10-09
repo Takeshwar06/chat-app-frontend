@@ -1,0 +1,334 @@
+
+:root{
+    --bg-black-900:#f2f2fc;
+    --bg-black-100:#fdf9ff;
+    --bg-black-50:#e9dfec;
+    --text-black-900:#302e4d;
+    --text-black-700:#504e70;
+}
+.main-container.dark{
+    --bg-black-900:#151515;
+    --bg-black-100:#222222;
+    --bg-black-50:#393939;
+    --text-black-900:#ffffff;
+    --text-black-700:#e9e9e9e9;
+}
+body{
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: 'poppins' sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.main-container{
+    width: 100vw;
+    height: 100vh;
+    padding: 30px 50px 30px 50px;
+    background-color:var(--bg-black-100) ;
+    border: 1px solid var(--text-black-700);
+    border-radius:12px ;
+}
+.main-container .container{
+    width: 100%;
+    display: flex;
+    height: 100%;
+    background-color:var(--bg-black-900);
+}
+.main-container .container .contact-container{
+    width: 30%;
+    height: 100%;
+    background-color: var(--bg-black-100);
+    display: flex;
+    flex-direction: column;
+}
+.main-container .container .contact-container .brand{
+     width: 100%;
+     background-color: var(--bg-black-100);
+     border:1px solid var(--text-black-700);
+     border-radius: 12px;
+       /* position: relative; */
+     /*  top: 30px; */
+     /* height: 65px; */
+    
+}
+.main-container .container .contact-container .brand .logo{
+         display: flex;
+         color: var(--text-black-700);
+         align-items: center;
+         justify-content: center;
+         margin-left: 8px;
+}
+.main-container .container .contact-container .brand .logo h3{
+    margin-left: 15px;
+    font-size: 2rem;
+    font-family: 'Dancing Script', 'Clicker Script',cursive;
+}
+.main-container .container .contact-container .brand .searchbar{
+       display: flex;
+       align-items: center;
+       justify-content:  center;
+       margin: 5px;
+}
+.main-container .container .contact-container .brand .searchbar input{
+    width: 100%;
+    height: 33px;
+    border: 1px solid var(--bg-black-50);
+    color: var(--text-black-700);
+    border-radius: 5px;
+    background-color: var(--bg-black-100);
+    padding: 2px 15px;
+    font-size:15px;
+    font-weight:500;
+}
+.main-container .container .contact-container .brand img{
+    width: 65px;
+    height: 65px;
+}
+.main-container .container .contact-container .contacts{
+    height: calc(100% );
+   background-color: var(--bg-black-100);
+   overflow-y: scroll;
+   border:1px solid var(--text-black-700);
+   border-radius: 15px;
+&::-webkit-scrollbar {
+    width: 0.2rem;
+    &-thumb {
+      background-color: #ffffff39;
+      width: 0.1rem;
+      border-radius: 1rem;
+    }
+  }
+  }
+.main-container .container .contact-container .contacts .contact{
+    width: 100%;
+    background-color:var(--bg-black-50);
+    color: var(--text-black-700);
+    display: flex;
+    align-items: center;
+    min-height: 67;
+    border-radius: 10px;
+    margin: 12px 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    
+}
+/* default name box */
+.main-container .container .contact-container .contacts .contact .default-name-box{
+    /* style={{backgroundColor:"red",height:"32px",width:"70%"}} */
+    background-color: var(--bg-black-100);
+    height: 32px;
+    width: 70%;
+}
+.main-container .container .contact-container .contacts .selected{
+    background-color: #58ff66;
+    border: 1px solid #2c3d2f;
+}
+.main-container .container .contact-container .contacts .contact .avatar{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--bg-black-100
+);
+}
+.main-container .container .contact-container .contacts .contact .avatar img{
+    width: 100%;
+    height: 100%;
+}
+.main-container .container .contact-container .contacts .contact .username{
+   display: inline-block;
+   margin-left: 12px;
+}
+.main-container .container .contact-container .current-user{
+    display: flex;
+    height: 110px;
+    /* justify-content:space-around; */
+    padding: 5px 10px;
+    border: 1px solid var(--text-black-700);
+    border-radius: 12px;
+    color: var(--text-black-900);
+    align-items: center;
+}
+.main-container .container .contact-container .current-user .avatar{
+    width: 65px;
+    height: 65px;
+    border: 50%;
+    margin-right: 12px;
+}
+.main-container .container .contact-container .current-user .avatar img{
+        width: 100%;
+        height: 100%;
+}
+/* chat container */
+.main-container .container .chat-container{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: var(--text-black-700);
+
+}
+.main-container .container .chat-container .chat-header{
+    height: 65px;
+    top: 30px;
+    background-color:var(--bg-black-100);
+    color: var(--text-black-700);
+    border: 1px solid var(--text-black-700);
+    border-radius: 12px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ .main-container .container .chat-container .user-details{
+    display: flex;
+    align-items: center;
+
+ }
+.main-container .container .chat-container .chat-header .user-details .avatar {
+    width: 65px;
+    height: 65px;
+    border: 50%;
+    margin-right: 12px;
+}
+.main-container .container .chat-container .chat-header .user-details .avatar img{
+    width: 100%;
+    height: 100%;
+}
+.chat-container .chat-header .header-btn{
+   height: 100%;
+   display: flex;
+   align-items: center;
+}
+.chat-container .chat-header .header-btn .contact-btn{
+    display:none;
+}
+.main-container .container .chat-container  .chat-messages{
+    /* display: flex; */
+    height: calc(100%);
+    width: 100%;
+    padding: 25px;
+    border-top: 1px solid var(--text-black-700);
+    border-radius: 12px;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        width: 0.2rem;
+        &-thumb {
+          background-color: #ffffff39;
+          width: 0.1rem;
+          border-radius: 1rem;
+        }
+      }
+}
+
+.main-container .container .chat-container  .chat-messages .sended{
+    float: right;
+    clear: both;
+    max-width: 40%;
+
+}
+.main-container .container .chat-container  .chat-messages .recieved{
+      float: left;
+      clear: both;
+      max-width: 40%;
+}
+.main-container .container .chat-container  .chat-messages .content p{
+    padding: 5px 15px;
+    background-color: var(--bg-black-50);
+    border: 1px solid var(--text-black-700);
+    border-radius: 15px;
+    color: var(--text-black-700);
+    margin-bottom: 5px;
+
+}
+
+.main-container .container .chat-container .input-container{
+    width: 100%;
+    height: 65px;
+    /* background-color: blueviolet; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 12px;
+
+}
+.main-container .container .chat-container .input-container input{
+    height: 35px;
+    width: 90%;
+    /* margin:0px 5px; */
+    padding: 2px 16px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid var(--text-black-700);
+    color: var(--text-black-700);
+    background-color: var(--bg-black-900);
+}
+.main-container .container .chat-container .input-container button{
+    height: 35px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: larger;
+    color: var(--text-black-700);
+    background-color:var(--bg-black-900);
+    border: 1px solid var(--text-black-700);
+    cursor: pointer;
+    /* background-color: azure; */
+}
+.input-main-container{
+    display: flex;
+    align-items: center;
+}
+
+
+/* welcome page Lets chat btn dont show in window */
+.welcome-btn{
+    display: none;
+}
+
+/* midea query */
+@media (max-width:900px){
+    .main-container{
+        padding: 0;
+    }
+}
+@media (max-width:775px){
+    .main-container .container .contact-container.hidden {
+        transform: translateX(-100%);
+      }
+    .main-container .container .contact-container{
+           width: 100%;
+           position: absolute;
+           top: 0;
+           transition: all 0.3s ease;
+    }
+    .main-container .container .chat-container{
+          width: 100%;
+    }
+    .chat-container .chat-header .header-btn .contact-btn{
+        display:inline-block;
+    }
+    .welcome-btn{
+        display: inline-block;
+    }
+}
+
+@media (max-width:500px){
+    .main-container .container .chat-container  .chat-messages .sended,
+    .main-container .container .chat-container  .chat-messages .recieved{
+        max-width: 70%;
+    }
+    .main-container .container .chat-container  .chat-messages{
+        padding: 10px;
+    }
+}

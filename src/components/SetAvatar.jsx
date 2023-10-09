@@ -126,6 +126,9 @@ const Container = styled.div`
   .avatars {
     display: flex;
     gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 
     .avatar {
       border: 0.4rem solid transparent;

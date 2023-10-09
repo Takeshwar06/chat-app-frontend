@@ -26,25 +26,34 @@ export default function ChatInput({ handleSendMsg }) {
   };
 
   return (
-    <Container>
-      <div className="button-container">
-        <div className="emoji">
-          <BsEmojiSmileFill onClick={handleEmojiPickerhideShow} />
-          {showEmojiPicker && <Picker onEmojiClick={handleEmojiClick} />}
-        </div>
-      </div>
-      <form className="input-container" onSubmit={(event) => sendChat(event)}>
-        <input
-          type="text"
-          placeholder="type your message here"
-          onChange={(e) => setMsg(e.target.value)}
-          value={msg}
-        />
-        <button type="submit">
-          <IoMdSend />
-        </button>
-      </form>
-    </Container>
+    <form class="input-container" onSubmit={(event) => sendChat(event)}>
+      <input
+        type="text"
+        placeholder="type your message here"
+        onChange={(e) => setMsg(e.target.value)}
+        value={msg}
+      />
+      <button type="submit"><IoMdSend /></button>
+    </form>
+    // <Container>
+    //   <div className="button-container">
+    //     <div className="emoji">
+    //       <BsEmojiSmileFill onClick={handleEmojiPickerhideShow} />
+    //       {showEmojiPicker && <Picker onEmojiClick={handleEmojiClick} />}
+    //     </div>
+    //   </div>
+    //   <form className="input-container" onSubmit={(event) => sendChat(event)}>
+    //     <input
+    //       type="text"
+    //       placeholder="type your message here"
+    //       onChange={(e) => setMsg(e.target.value)}
+    //       value={msg}
+    //     />
+    //     <button type="submit">
+    //       <IoMdSend />
+    //     </button>
+    //   </form>
+    // </Container>
   );
 }
 
