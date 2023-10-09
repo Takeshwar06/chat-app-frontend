@@ -37,7 +37,7 @@ export default function Contacts({showDefaultContact,setContactHidden,contactHid
           <div className="brand">
             <div className="logo">
               <img src={Logo} alt="logo" />
-              <h3>snappy</h3>
+              <h3>ChatCraze</h3>
             </div>
             <div className="searchbar">
               <input value={searchString} name="searchString" onChange={e=>handleSearchedContact(e)} type="text" placeholder="search contact" />

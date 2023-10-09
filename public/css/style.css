@@ -67,7 +67,6 @@ body{
 .main-container .container .contact-container .brand .logo h3{
     margin-left: 15px;
     font-size: 2rem;
-    font-family: 'Dancing Script', 'Clicker Script',cursive;
 }
 .main-container .container .contact-container .brand .searchbar{
        display: flex;
