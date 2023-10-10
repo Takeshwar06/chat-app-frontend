@@ -25,7 +25,7 @@ export default function Contacts({showDefaultContact,setContactHidden,contactHid
   const handleSearchedContact=(e)=>{
     setSearchString(e.target.value)
     const data=contacts.filter((element)=>{
-      return(element.username.includes(e.target.value));
+      return(element.username.toLowerCase().includes(e.target.value.toLowerCase()));
     })
     setSearchContacts(data);
   }

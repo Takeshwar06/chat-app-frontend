@@ -330,4 +330,21 @@ body{
     .main-container .container .chat-container  .chat-messages{
         padding: 10px;
     }
+
+    /*  you can remove this if not work properly */
+    .main-container .container .chat-container .input-container{
+        position: fixed;
+        bottom: 0 ;
+        /* background-color: var(--bg-black-900); */
+    }
+    .main-container .container .contact-container{
+        /* position: relative; */
+        z-index: 2;
+    }
+    .main-container .container .chat-container .chat-messages{
+        height: 83%;  
+    } 
+    .main-container .container .contact-container .contacts {
+        height: 100%;
+    }
 }
